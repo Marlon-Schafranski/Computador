@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cadastrar Computadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-item>
+    <ion-input label="Categoria" placeholder="Insira a cadegoria do computador" [(ngModel)]="categoria"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Procassador" placeholder="Insira o procassador do computador" [(ngModel)]="processador"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="placaVideo" placeholder="Insira a placa de video do computador" [(ngModel)]="placaVideo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Memoria Ram" placeholder="Insira a Memoria Ram do computador" [(ngModel)]="memoriaRam"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-select label="Armazenamento" placeholder="Seçecione o armazenamento" [(ngModel)]="armazenamento" >
+    <ion-select-option value="0">SSD 256GB</ion-select-option>
+    <ion-select-option value="1">SSD 500GB</ion-select-option>
+    <ion-select-option value="2">SSD 1000GB</ion-select-option>
+    <ion-select-option value="3">SSD 500GB + HD 1000GB</ion-select-option>
+    <ion-select-option value="4">SSD 500GB M2</ion-select-option>
+  </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-button expand="block"  (click)="cadastrar()" color="success" fill="outline" >Cadastrar</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button expand="block" color="primary" fill='outline'>
+      <input type="file" (change)="uploadFile($event)" />
+
+    </ion-button>
+  </ion-item>
+
+    <ion-item>
+      <ion-button expand="block"  (click)="voltar()" color="primary" fill="outline" >Voltar</ion-button>
+    </ion-item>
+
+
+</ion-content>
